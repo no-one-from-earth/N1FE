@@ -1,0 +1,161 @@
+@font-face {
+    font-family: 'poppins';
+    src: url(../font/poppins.ttf) format(truetype);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #FFFAEC;
+    font-family: 'poppins', sans-serif;
+    color: #006A71;
+    text-align: justify;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8vw;
+    background-color: #006A71;
+    color: #FFFAEC;
+}
+
+.logo {
+    height: 2.5em;
+}
+
+h1 {
+    margin: 0;
+    padding: 0 12px;
+}
+
+h1.hide {
+    display: none;
+}
+
+.header-logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    width: auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul.show {
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+li {
+    padding-left: 12px;
+
+}
+
+nav a {
+    color: #FFFAEC;
+    text-decoration: none;
+}
+
+nav a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: #FFFAEC;
+    transform: scale(0,1);
+    transform-origin: center;
+    transition: transform 0.3s;
+}
+
+nav a:hover::after {
+    transform: scale(1,1);
+}
+
+button.hamburger {
+    position: relative;
+    display: none;
+}
+
+main {
+    padding: 0 8vw;
+}
+
+.highlighted {
+  display: inline-block;
+  animation: popIn 3s ease-out alternate infinite;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* start screen fit */
+@media only screen and (min-width: 1597px) {
+    body {
+        font-size: 1.5em;
+    }
+
+    nav>ul>li {
+        font-size: 0.7em;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    button.hamburger {
+        display: block;
+        padding: 20px 0;
+        border: 0;
+        background-color: transparent;
+        color: #FFFAEC;
+        font-size: 27px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: auto;
+    }
+
+    ul {
+        display: none;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 0;
+    }
+
+    li {
+        margin: 0;
+        padding: 0 8px;
+    }
+}

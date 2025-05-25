@@ -1,0 +1,294 @@
+@font-face {
+    font-family: 'poppins';
+    src: url(../font/poppins.ttf) format(truetype);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #FFFAEC;
+    font-family: 'poppins', sans-serif;
+    color: #006A71;
+    text-align: justify;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8vw;
+    background-color: #006A71;
+    color: #FFFAEC;
+}
+
+.logo {
+    height: 2.5em;
+}
+
+h1 {
+    margin: 0;
+    padding: 0 12px;
+}
+
+h1.hide {
+    display: none;
+}
+
+.header-logo-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    width: auto;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul.show {
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+li {
+    padding-left: 12px;
+
+}
+
+nav a {
+    color: #FFFAEC;
+    text-decoration: none;
+}
+
+nav a::after {
+    content: "";
+    display: block;
+    height: 3px;
+    background-color: #FFFAEC;
+    transform: scale(0,1);
+    transform-origin: center;
+    transition: transform 0.3s;
+}
+
+nav a:hover::after {
+    transform: scale(1,1);
+}
+
+button.hamburger {
+    position: relative;
+    display: none;
+}
+
+main {
+    padding: 0 8vw;
+}
+
+#members {
+    padding: 21px;
+    text-align: center;
+    background-color: rgba(255, 180, 51, 0.1);
+}
+
+#members h2 {
+    font-size: 2em;
+    margin-bottom: 60px;
+}
+
+.members-floating {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 21px;
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.member {
+    position: relative;
+    width: 21%;
+    animation: float 5s ease-in-out infinite;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+.member:nth-child(2) {
+    animation-delay: 1s;
+}
+.member:nth-child(3) {
+    animation-delay: 2s;
+}
+.member:nth-child(4) {
+    animation-delay: 3s;
+}
+
+.member img {
+    width: 100%;
+    height: auto;
+    filter: sepia(60%) blur(1px);
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.8s ease-in-out, filter 0.8s ease-in-out, border 0.8s ease-in-out;
+}
+
+.member:hover img {
+    filter: none;
+    border: 5px solid #FFFAEC;
+    transform: rotate(4deg) scale(1.05);
+}
+
+.info {
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateY(10px);
+}
+
+.member:hover .info {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.member h3 {
+    font-size: 1.1em;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.member p {
+    font-size: 0.9em;
+    color: #333446;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+#instagram {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.ig {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    padding: 12px;
+    margin-bottom: 21px;
+}
+
+footer {
+    background-color: #006A71;
+    color: #FFFAEC;
+    text-align: center;
+    padding: 12px;
+    font-size: 0.9rem;
+}
+
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; /* espacio entre logo y texto */
+  margin-bottom: 1rem;
+}
+
+.footer-logo {
+  width: 3.4em;
+  height: auto;
+  opacity: 0.8;
+}
+
+.logotext {
+  margin: 0; /* quitar márgenes para mejor alineación */
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.footer-contact a {
+  color: #FFFAEC;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.footer-contact a:hover {
+  color: rgb(255, 180, 51);
+}
+
+/* start screen fit */
+@media only screen and (min-width: 1597px) {
+    body {
+        font-size: 1.5em;
+    }
+
+    nav>ul>li {
+        font-size: 0.7em;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    h1 {
+        font-size: 1.2em;
+    }
+
+    button.hamburger {
+        display: block;
+        padding: 20px 0;
+        border: 0;
+        background-color: transparent;
+        color: #FFFAEC;
+        font-size: 27px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: auto;
+    }
+
+    ul {
+        display: none;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 0;
+    }
+
+    li {
+        margin: 0;
+        padding: 0 8px;
+    }
+
+    .members-floating {
+        gap: 34px;
+    }
+
+    .member {
+        width: 44%;
+    }
+
+    .member h3 {
+        font-size: 1em;
+    }
+
+    .member p {
+        font-size: 0.8em;
+    }
+}
