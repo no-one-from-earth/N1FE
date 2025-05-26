@@ -168,9 +168,16 @@ main {
     margin-bottom: 5px;
 }
 
-.member p {
+.member p, a {
     font-size: 0.9em;
     color: #333446;
+    text-decoration: none;
+    transition: 0.8s ease-in-out;
+}
+
+.member a:hover {
+    color: #FFFAEC;
+    background-color: #333446;
 }
 
 @keyframes float {
@@ -203,33 +210,22 @@ footer {
 }
 
 .footer-top {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem; /* espacio entre logo y texto */
-  margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem; /* espacio entre logo y texto */
 }
 
 .footer-logo {
-  width: 3.4em;
-  height: auto;
-  opacity: 0.8;
+    width: 3.4em;
+    height: auto;
+    opacity: 0.8;
 }
 
 .logotext {
-  margin: 0; /* quitar márgenes para mejor alineación */
-  font-weight: 500;
-  font-size: 1.1rem;
-}
-
-.footer-contact a {
-  color: #FFFAEC;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out;
-}
-
-.footer-contact a:hover {
-  color: rgb(255, 180, 51);
+    margin: 0; /* quitar márgenes para mejor alineación */
+    font-weight: 500;
+    font-size: 1.1rem;
 }
 
 /* start screen fit */

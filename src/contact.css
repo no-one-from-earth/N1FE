@@ -10,9 +10,9 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #FFFAEC;
+    background-color: #006A71;
     font-family: 'poppins', sans-serif;
-    color: #006A71;
+    color: #FFFAEC;
     text-align: justify;
 }
 
@@ -21,8 +21,6 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 8vw;
-    background-color: #006A71;
-    color: #FFFAEC;
 }
 
 .logo {
@@ -97,6 +95,13 @@ main {
     padding: 0 8vw;
 }
 
+hr {
+    margin: 0;
+    border: none;
+    height: 1px;
+    background-color: #FFFAEC;
+}
+
 .highlighted {
   display: inline-block;
   animation: popIn 3s ease-out alternate infinite;
@@ -111,41 +116,6 @@ main {
     opacity: 1;
     transform: scale(1);
   }
-}
-
-.youtube {
-    display: block;
-    margin: 12px auto;
-    width: 89%;
-    aspect-ratio: 16 / 9;
-    border: none;
-  }
-
-footer {
-    background-color: #006A71;
-    color: #FFFAEC;
-    text-align: center;
-    padding: 12px;
-    font-size: 0.9rem;
-}
-
-.footer-top {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem; /* espacio entre logo y texto */
-}
-
-.footer-logo {
-    width: 3.4em;
-    height: auto;
-    opacity: 0.8;
-}
-
-.logotext {
-    margin: 0; /* quitar márgenes para mejor alineación */
-    font-weight: 500;
-    font-size: 1.1rem;
 }
 
 /* start screen fit */
@@ -190,9 +160,5 @@ footer {
     li {
         margin: 0;
         padding: 0 8px;
-    }
-
-    .youtube {
-        width: 100%;
     }
 }
